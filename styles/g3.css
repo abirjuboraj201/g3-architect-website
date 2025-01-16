@@ -45,6 +45,7 @@ main>section{
 .section-title{
     font-size: 2.3rem;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 .description{
     font-weight: 400;
@@ -130,10 +131,67 @@ main>section{
 }
 
 .feature-description{
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.8rem;
 
 }
+/* some facts style */
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.fact-card{
+    border: 2px solid #FF900E;
+    border-radius: 8px;
+    width: 190px;
+    height: 190px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 35px;
+}
+
+.fact-num{
+    font-weight: 600;
+    font-size: 2.3rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.fact-name{
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.fact-description{
+    width: 430px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 80px;
+}
+/* sponsor style */
+.sponsors-info{
+    max-width: 430px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+
+
+
+
+
+
+
+
 /* Responsive style */
 /* small device */
 @media screen and (max-width:576px) {
@@ -142,12 +200,27 @@ main>section{
     .teams{
         flex-direction: column;
     }
-    .team-image-container{
+    .team-image-container, 
+    .facts-container,
+    .sponsor-companies{
         grid-template-columns: repeat(1,1fr);
     }
-
+    .some-fact{
+        text-align: center;
+    }
+    .facts-container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .fact-description{
+        width: 100%;
+    }
     .our-feature{
         margin-left: 30px;
+    }
+    .sponsor-companies{
+        justify-items: center;
+        gap: 40px;
     }
 }
 
@@ -155,5 +228,19 @@ main>section{
 @media screen and (min-width:576px) and (max-width:992px) {
     .teams{
         flex-direction: column;
+    }
+    .some-fact{
+        text-align: center;
+    }
+    .fact-description{
+        width: 100%;}
+    .facts-container{
+        justify-items: center;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sponsor-companies{
+        justify-items: center;
+        grid-template-columns: repeat(3,1fr);
+        gap: 40px;
     }
 }

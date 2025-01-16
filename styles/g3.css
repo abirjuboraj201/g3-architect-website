@@ -33,7 +33,7 @@
     margin: 0 auto;
 }
 
-main{
+main, footer{
     max-width: 1150px;
     margin: 0 auto;
 }
@@ -130,11 +130,63 @@ main>section{
     color: #FF900E;
 }
 
+
+
+
+
+
+/* Enjoyabile feature style */
+
+.features{
+    gap: 105px;
+    margin-bottom: 100px;
+}
+
+#title-border{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-cards{
+    width: 440px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 15px auto;
+}
 .feature-description{
+    width: 470px;
     font-weight: 400;
     font-size: 0.8rem;
+    margin-bottom: 25px;
 
 }
+
+.featured-architect img{
+    width: 100%;
+}
+#experience-badge{
+    padding: 45px 35px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-left: -70px;
+    margin-top: -100px;
+}
+
+#experience-year{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+
+
+
 /* some facts style */
 .facts-container{
     display: grid;
@@ -185,7 +237,18 @@ main>section{
 }
 
 
+/* footer style */
 
+#footer-subtitle{
+    
+    margin-top: 130px;
+    margin-bottom: 200px;
+    background-color: #FFF4E7;
+    text-align: center;
+    padding: 30px 300px;
+    font-weight: 400;
+    font-size: 1rem;
+}
 
 
 
@@ -197,13 +260,27 @@ main>section{
 @media screen and (max-width:576px) {
     .navbar, 
     .nav-links,
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
     .team-image-container, 
     .facts-container,
     .sponsor-companies{
         grid-template-columns: repeat(1,1fr);
+    }
+    .feature-description{
+        width: 400px;
+    }
+    .feature-cards{
+        width: 370px;
+    }
+    .featured-architect img{
+        width: 100%;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 60px;
     }
     .some-fact{
         text-align: center;
@@ -221,6 +298,10 @@ main>section{
     .sponsor-companies{
         justify-items: center;
         gap: 40px;
+    }
+
+    #footer-subtitle{
+        padding: 30px 0px;
     }
 }
 
